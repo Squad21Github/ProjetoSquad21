@@ -1,0 +1,63 @@
+﻿@model Refugiados1.Models.SolicitarDadiva
+
+@{
+    ViewData["Title"] = "Create";
+}
+<header>
+    <div>
+        <h1>Solicitar</h1>
+
+        <h3 style="margin-bottom: 40px">Solicitar Dádiva</h3>
+    </div>
+</header>
+
+<hr />
+
+<section style="max-width: 70%;">
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Ong" class="control-label"></label>
+                <input asp-for="Ong" class="form-control" />
+                <span asp-validation-for="Ong" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Endereço" class="control-label"></label>
+                <input asp-for="Endereço" class="form-control" />
+                <span asp-validation-for="Endereço" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefone" class="control-label"></label>
+                <input asp-for="Telefone" class="form-control" />
+                <span asp-validation-for="Telefone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dádiva" class="control-label"></label>
+                <input asp-for="Dádiva" class="form-control" />
+                <span asp-validation-for="Dádiva" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Solicitar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div>
+    <a asp-action="Index">Voltar para a lista</a>
+</div>
+
+</section>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

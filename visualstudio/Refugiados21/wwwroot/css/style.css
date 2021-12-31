@@ -1,0 +1,187 @@
+
+header{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    font-family: Arial;
+    background-image: url("/midia/migration-3129340.jpg");
+    background-attachment: fixed;
+    background-position: center;
+}
+
+header div {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header div p a {
+    color: black;
+    box-shadow: 2px 2px 2px 2px black;
+}
+
+header div p a:hover{
+    box-shadow: 3px 3px 3px 3px black;
+}
+
+header div h3 {
+    text-align: left;
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+.navs {
+    transition: 0.5s;
+    display: flex;
+    height: 70px;
+    background-color: rgb(0,180,204);
+    opacity: 0.7;
+}
+
+.navs:hover {
+    opacity: 1;
+    background-color: rgb(0,180,204);
+}
+
+.navs h3{
+    margin-left: 10px;
+}
+
+.menus{
+    width: 100%;
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.menus li{
+    padding: 10px;
+    list-style: none;
+    display: inline;
+    position: relative;
+}
+
+.menus li a{
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    color: black;
+}
+
+.menus li a:hover{
+    background-color: aquamarine;
+    transition: 1s;
+}
+
+.menus li ul{
+    display: none;
+    left: 0;
+    position: absolute;
+}
+
+.menus li:hover ul{
+    display: block;
+}
+
+.menus li ul{
+    width: 170px;
+    background-color: rgb(0, 180, 204);
+}
+
+.menus li ul a{
+    display: block;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+section {
+    display: grid;
+    width: 95%;
+    margin: auto;
+    background-color: rgb(176, 255, 241);
+    padding: 0px 15px 15px 15px;
+    text-align: justify;
+    margin-top: 80px;
+    font-family: Arial;
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px 2px black;
+}
+
+section:hover{
+    box-shadow: 2px 2px 5px 5px black;
+    transition: 0.5s;
+    background-color: rgb(4, 7, 26);
+    color: white;
+}
+
+section article p{
+    margin-top: 10px;
+}
+
+section article h1{
+    margin-top: 10px;
+}
+
+section div{
+    padding: 7px;
+    margin: auto;
+}
+
+.jumb {
+    margin-left: -7%;
+    margin-right: -7%;
+    margin-top: 50px;
+    background: none;
+    border-radius: 12px;
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.jumb:hover {
+    transition: 0.5s;
+    opacity: 1;
+    background-color: white;
+    box-shadow: 1px 1px 3px 3px black;
+}
+
+.paddingemargin{
+    padding: 30px;
+    margin-top: 30px;
+}
+
+footer {
+    background-color: lightgray;
+    opacity: 0.7;
+    margin-bottom: -30px;
+    margin-top: 80px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3px;
+}
+
+footer:hover{
+   opacity: 1;
+}
+
+footer div{
+    margin-top: -25px;
+}
+
+main section h2{
+    text-align: center;
+    margin-top: 24px;
+}
+
+main section h2 a{
+    text-decoration: none;
+    color: black;
+    background-color: aqua;
+    border-radius: 15px;
+    padding: 5px
+}
+
+main section h2 a:hover{
+    text-decoration: underline;
+}

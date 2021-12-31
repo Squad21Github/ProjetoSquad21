@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Refugiados1.Models.AtenderDadiva>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<header>
+
+    <div>
+        <h1>SEÇÃO DAS PESSOAS AJUDADORAS</h1>
+
+        <h3>Atender Dádivas</h3>
+
+        <p>
+            <a asp-action="Create" class="btn btn-primary">Solicitar nova dádiva</a>
+        </p>
+    </div>
+    
+</header>
+
+
+<section>
+
+@foreach (var item in Model) {
+        
+            <p style="margin-top: 10px;">
+                <strong>@Html.DisplayNameFor(model => model.Seu_Nome):</strong>
+                @Html.DisplayFor(modelItem => item.Seu_Nome)
+            </p>
+            
+            <p>
+                <strong>@Html.DisplayNameFor(model => model.Telefone):</strong>
+                @Html.DisplayFor(modelItem => item.Telefone)
+            </p>
+            
+            <p>
+                <strong>@Html.DisplayNameFor(model => model.Email):</strong>
+                @Html.DisplayFor(modelItem => item.Email)
+            </p>
+            
+            <p>
+                <strong>@Html.DisplayNameFor(model => model.CPF):</strong>
+                @Html.DisplayFor(modelItem => item.CPF)
+            </p>
+            
+            <p>
+                <strong>@Html.DisplayNameFor(model => model.SolicitarDadiva):</strong>
+                @Html.DisplayFor(modelItem => item.SolicitarDadiva.Dádiva)
+            </p>
+            
+            <span>
+                <a asp-action="Edit" asp-route-id="@item.IdAtender" class="btn btn-primary">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdAtender" class="btn btn-primary">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdAtender" class="btn btn-danger">Deletar</a>
+            </span>
+    <hr />
+}
+</section> 
+

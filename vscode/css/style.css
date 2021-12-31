@@ -1,6 +1,8 @@
 body{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    
+    background-image: url("/midia/migration-3129340.jpg");
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .navs{
