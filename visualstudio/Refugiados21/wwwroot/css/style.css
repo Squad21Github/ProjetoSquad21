@@ -63,17 +63,17 @@ header div h3 {
     position: relative;
 }
 
-.menus li a{
-    text-decoration: none;
-    padding: 10px;
-    display: inline-block;
-    color: black;
-    border-radius: 5px;
-}
+    .menus li a {
+        text-decoration: none;
+        padding: 10px;
+        display: inline-block;
+        color: black;
+        border-radius: 5px;
+        transition: 0.6s;
+    }
 
 .menus li a:hover{
     background-color: white;
-    transition: 0.6s;
 }
 
 .menus li ul{
@@ -126,11 +126,11 @@ section {
     border-radius: 6px;
     box-shadow: 2px 2px 2px 2px black;
     width: 80%;
+    transition: 0.5s;
 }
 
 section:hover{
     box-shadow: 2px 2px 5px 5px black;
-    transition: 0.5s;
     background-color: black;
     color: white;
 }
@@ -152,15 +152,28 @@ section div{
     display: flex;
 }
 
-.jumb {
+.bvd {
     margin-top: 50px;
     margin-bottom: -28px;
     border-radius: 12px;
-    
+    align-self: center;
     padding: 20px;
     width: 50%;
     margin-left: -10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.frasepreta{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.jumb {
+    width: 85%;
+    margin: auto;
+    background-color: white;
+    animation: go-back 1.5s;
 }
 
 .paddingemargin{
@@ -226,8 +239,19 @@ main section h2 a:hover{
     background-size: 100% 100%;
     min-height: 600px;
     top: 0px;
+    
 }
 
 .bgprin section {
     margin-top: 60px;
+}
+
+@keyframes go-back {
+    0% {
+        transform: translateX(100px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }

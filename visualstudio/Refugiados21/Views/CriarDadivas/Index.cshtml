@@ -1,15 +1,17 @@
 ﻿@model IEnumerable<Refugiados1.Models.CriarDadiva>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Criar Dádivas";
 }
 
 <header>
     <div>
         <h2>Distribua suas Dádivas. Seja o Anjo de alguém!</h2>
+        <p style="background: lightblue;">Exemplos de dádivas que você pode criar: Cesta Básica, Aulas de português, Roupas, Móveis, Aparelhos eletrônicos, etc.</p>
         <p>
             <a asp-action="Create" class="btn btn-primary">Criar Dádiva</a>
         </p>
+        <p class="alert alert-warning" role="alert">Em caso de determinadas dádivas como perecíveis, roupas e outros, tenha atenção a qualidade, pois estará sujeito a verificação por parte da ong que recorrer a sua dádiva.</p>
     </div>
 </header>
 

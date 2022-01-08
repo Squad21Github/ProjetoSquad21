@@ -11,6 +11,9 @@
         <p>
             <a asp-action="Create" class="btn btn-primary">Selecionar Dádiva</a>
         </p>
+        
+        <p class="alert alert-warning" role="alert">Obs: estejam atentos a qualidade dos produtos a serem escolhidos.</p>
+
     </div>
 </header>
 
@@ -38,12 +41,12 @@
         </p>
         <p>
             Anjo:
-            @Html.DisplayFor(modelItem => item.CriarDadiva.Nome):
+            @Html.DisplayFor(modelItem => item.CriarDadiva.Nome)
         </p>
 
         <p>
             Dádiva:
-            @Html.DisplayFor(modelItem => item.CriarDadiva.Dadiva):
+            @Html.DisplayFor(modelItem => item.CriarDadiva.Dadiva)
         </p>
 
         <span>
