@@ -48,7 +48,7 @@ namespace Refugiados1.Controllers
         // GET: AtenderDadivas/Create
         public IActionResult Create()
         {
-            ViewData["IdDadiva"] = new SelectList(_context.SolicitarDadiva, "IdDadiva","Dádiva");
+            ViewData["IdDadiva"] = new SelectList(_context.SolicitarDadiva, "IdDadiva","Dádiva", "IdOng", "Ong");
             return View();
         }
 
@@ -81,7 +81,7 @@ namespace Refugiados1.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdDadiva"] = new SelectList(_context.SolicitarDadiva, "IdDadiva", "Dádiva", atenderDadiva.IdDadiva);
+            ViewData["IdDadiva"] = new SelectList(_context.SolicitarDadiva, "IdDadiva", "Dádiva", "IdOng", "Ong");
             return View(atenderDadiva);
         }
 

@@ -3,52 +3,53 @@
 @{
     ViewData["Title"] = "Details";
 }
+
 <header>
     <div>
-        <h1>Detalhes</h1>
+        <h2>Detalhes</h2>
     </div>
 </header>
 
 <section>
-
-<div>
-    <h4>Solicitação de Dádiva</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Ong)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Ong)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Endereço)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Endereço)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Telefone)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Telefone)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Dádiva)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Dádiva)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.IdDadiva">Editar</a> |
-    <a asp-action="Index">Voltar para a lista</a>
-</div>
+    <div>
+        <br />
+        <h4>Solicitar Dádiva</h4>
+        <hr />
+        <dl class="row">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Ong)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Ong)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Endereço)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Endereço)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Telefone)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Telefone)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Dádiva)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Dádiva)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model?.IdDadiva" class="btn btn-primary">Editar</a> |
+        <a asp-action="Index" class="btn btn-primary">Voltar</a>
+    </div>
 </section>

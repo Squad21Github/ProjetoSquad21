@@ -24,6 +24,7 @@ namespace Refugiados1.Models
 
         [ForeignKey("CriarDadiva")]
         public int IdCriarDadiva { get; set; }
+        public int IdNome { get; set; }
         public virtual CriarDadiva CriarDadiva { get; set; }
     }
 }

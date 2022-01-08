@@ -5,16 +5,14 @@
 }
 <header>
     <div>
-        <h1>Editar</h1>
-
-        <h4>Solicitar Dádiva</h4>
+        <h5>Editar</h5>
     </div>
 </header>
 
-<hr />
-
 <section>
-
+    <br />
+<h4>Solicitar Dádiva</h4>
+<hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
@@ -53,11 +51,10 @@
 </div>
 
 <div>
-    <a asp-action="Index">Voltar para a lista</a>
+    <a asp-action="Index" class="btn btn-primary">Voltar</a>
 </div>
+</section>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
-
-</section>

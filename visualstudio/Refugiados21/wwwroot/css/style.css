@@ -5,10 +5,12 @@ header{
 
 body {
     font-family: Arial;
-    background-image: url("/midia/migration-3129340.jpg");
+    background-image: url("/midia/migration-3129340.png");
     background-attachment: fixed;
     background-position: center;
 }
+
+
 
 header div {
     text-align: center;
@@ -35,13 +37,12 @@ header div h3 {
     transition: 0.5s;
     display: flex;
     height: 70px;
-    background-color: rgb(0,180,204);
+    background-color: rgb(142, 252, 255);
     opacity: 0.7;
 }
 
 .navs:hover {
     opacity: 1;
-    background-color: rgb(0,180,204);
 }
 
 .navs h3{
@@ -67,11 +68,12 @@ header div h3 {
     padding: 10px;
     display: inline-block;
     color: black;
+    border-radius: 5px;
 }
 
 .menus li a:hover{
-    background-color: aquamarine;
-    transition: 1s;
+    background-color: white;
+    transition: 0.6s;
 }
 
 .menus li ul{
@@ -84,9 +86,9 @@ header div h3 {
     display: block;
 }
 
-.menus li ul{
+.menus li ul {
     width: 170px;
-    background-color: rgb(0, 180, 204);
+    background-color: rgb(142, 252, 255);
 }
 
 .menus li ul a{
@@ -95,23 +97,41 @@ header div h3 {
     margin-right: 30px;
 }
 
+.logo {
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 8px;
+    margin-left: 10px;
+    
+}
+
+    .logo:hover {
+        background-color: white;
+        transition: 0.8s;
+
+    }
+
+.imglogo {
+    max-width: 110px;
+}
+
 section {
     display: grid;
-    width: 95%;
     margin: auto;
-    background-color: rgb(176, 255, 241);
+    margin-top: 30px;
+    background-color: white;
     padding: 0px 15px 15px 15px;
     text-align: justify;
-    margin-top: 80px;
-    font-family: Arial;
+    font-family: monospace;
     border-radius: 6px;
     box-shadow: 2px 2px 2px 2px black;
+    width: 80%;
 }
 
 section:hover{
     box-shadow: 2px 2px 5px 5px black;
     transition: 0.5s;
-    background-color: rgb(4, 7, 26);
+    background-color: black;
     color: white;
 }
 
@@ -128,23 +148,19 @@ section div{
     margin: auto;
 }
 
-.jumb {
-    margin-left: -3%;
-    margin-right: -3%;
-    margin-top: 50px;
-    background: none;
-    border-radius: 12px;
-    padding: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.index{
+    display: flex;
 }
 
-.jumb:hover {
-    background-position: center;
-    transition: 0.7s;
-    opacity: 1;
-    background-color: white;
-    box-shadow: 1px 1px 3px 3px black;
-    background-image: url("/midia/volunteer-1888823.png");
+.jumb {
+    margin-top: 50px;
+    margin-bottom: -28px;
+    border-radius: 12px;
+    
+    padding: 20px;
+    width: 50%;
+    margin-left: -10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .paddingemargin{
@@ -187,6 +203,31 @@ main section h2 a{
     padding: 5px
 }
 
+section span a{
+    text-decoration: none;
+    padding: 2px;
+}
+
+section span a:hover{
+    text-decoration: underline;
+    background-color: aquamarine;
+    border-radius: 4px;
+}
+
 main section h2 a:hover{
     text-decoration: underline;
+}
+
+.bgprin {
+    background: url('../midia/volunteer-1888823.png') no-repeat;
+    width: 100%;
+    padding: 10px;
+    background-color: #ccc;
+    background-size: 100% 100%;
+    min-height: 600px;
+    top: 0px;
+}
+
+.bgprin section {
+    margin-top: 60px;
 }

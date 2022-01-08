@@ -3,15 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Refugiados1</title>
+    <title>@ViewData["Title"] - Refugiados</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Refugiados1.styles.css" asp-append-version="true" />
+    <link rel="icon" href="~/midia/favicon-96x96.png" />
+    <!--Vou mudar o favicon ainda.-->
 </head>
 <body >
     <header>
         <nav class="navs">
-            <h3 style="margin-top: 20px; margin-left: 10px;"><a asp-controller="Home" asp-action="Index" style="color: black; text-decoration: none;">REFÚGIO</a></h3>
+            <h3 class="logo"><a asp-controller="Home" asp-action="Index" style="color: black; text-decoration: none;"><img src="~/midia/logo.png" height="40px" class="imglogo"/></a></h3>
             <ul class="menus">
                 <li><a asp-controller="Home" asp-action="Index">HOME</a></li>
                 <li><a href="#">DÁDIVAS</a>
@@ -25,14 +27,16 @@
         </nav>
     </header>
 
-    <div class="container">
+    
+
+    <div>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
     <footer class="border-top">
-        <span>&copy; 2021 - Refugiados1 - <a asp-controller="Home" asp-action="Sobre">Sobre</a></span>
+        <span>&copy; @DateTime.Now.Year - Refugiados - <a asp-controller="Home" asp-action="Sobre">Sobre</a></span>
          | <span>Contato: squad21github@gmail.com</span>
         <div  id="root">
             
