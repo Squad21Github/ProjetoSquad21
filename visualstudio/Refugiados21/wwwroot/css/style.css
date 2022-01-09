@@ -166,7 +166,9 @@ section div{
 .frasepreta{
     color: rgb(0, 0, 0);
     font-weight: bold;
-    font-size: 25px;
+    font-size: 45px;
+    text-size-adjust: auto;
+    
 }
 
 .jumb {
@@ -239,19 +241,73 @@ main section h2 a:hover{
     background-size: 100% 100%;
     min-height: 600px;
     top: 0px;
-    
+}
+
+.sobre {
+    background-color: white;
+    font-family: 'Arial Rounded MT';
+    font-size: 15px;
+    margin-top: 20px;
+    width: 70%;
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+    .sobre:hover {
+        background-color: white;
+        color: black;
+        box-shadow: 2px 2px 2px 2px black;
+    }
+
+.sobre article p{
+    margin-top: 15px;
 }
 
 .bgprin section {
     margin-top: 60px;
 }
 
+.titulosobre {
+    width: 90%;
+    animation: go-back 1s;
+    margin-left: 4%;
+}
+
+.mao {
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.apontador{
+    animation: slidein 0.7s infinite alternate;
+}
+
 @keyframes go-back {
     0% {
-        transform: translateX(100px);
+        transform: translateY(-100px);
     }
 
     100% {
-        transform: translateX(0);
+        transform: translateY(0px);
+        
+    }
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    to {
+        margin-left: -120%;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 868px) {
+    .frasepreta {
+        font-size: 25px;
     }
 }

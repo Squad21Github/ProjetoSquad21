@@ -8,6 +8,9 @@ namespace Refugiados1.Models
         {
 
         }
+
+        
+
         public DbSet<AtenderDadiva> AtenderDadiva { get; set; }
 
         public DbSet<CriarDadiva> CriarDadiva { get; set; }
