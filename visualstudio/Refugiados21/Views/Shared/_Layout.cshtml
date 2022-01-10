@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Refugiados1.styles.css" asp-append-version="true" />
     <link rel="icon" href="~/midia/migration-3129340.ico" />
-    <!--Vou mudar o favicon ainda.-->
 </head>
 <body >
     <header>
         <nav class="navs">
-            <h3 class="logo"><a asp-controller="Home" asp-action="Index" style="color: black; text-decoration: none;"><img src="~/midia/logo.png" height="40px" class="imglogo"/></a></h3>
+            
+            <a asp-controller="Home" asp-action="Index" class="imglogo logo"><img src="~/midia/logo.png" height="40px"/></a>
+            <div class="logotxt">
+            <a asp-controller="Home" asp-action="Index">Refúgio</a>
+            </div>
             <ul class="menus">
                 <li><a asp-controller="Home" asp-action="Index">HOME</a></li>
                 <li><a href="#">DÁDIVAS</a>
@@ -47,12 +50,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="~/js/js.js" asp-append-version="true" type="text/babel"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

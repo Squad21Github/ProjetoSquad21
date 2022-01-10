@@ -45,9 +45,7 @@ header div h3 {
     opacity: 1;
 }
 
-.navs h3{
-    margin-left: 10px;
-}
+
 
 .menus{
     width: 100%;
@@ -101,8 +99,6 @@ header div h3 {
     margin-top: 10px;
     padding: 5px;
     border-radius: 8px;
-    margin-left: 10px;
-    
 }
 
     .logo:hover {
@@ -112,7 +108,12 @@ header div h3 {
     }
 
 .imglogo {
-    max-width: 110px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.logotxt{
+    display: none;
 }
 
 section {
@@ -176,6 +177,12 @@ section div{
     margin: auto;
     background-color: white;
     animation: go-back 1.5s;
+}
+
+.pessoasimg {
+    min-height: 400px;
+    max-height: 600px;
+    max-width: 100%;
 }
 
 .paddingemargin{
@@ -276,7 +283,6 @@ main section h2 a:hover{
     width: 100%;
     display:flex;
     justify-content: center;
-    margin-left: 10px;
 }
 
 .apontador{
@@ -306,8 +312,33 @@ main section h2 a:hover{
     }
 }
 
-@media only screen and (max-width: 868px) {
+@media only screen and (max-width: 600px) {
     .frasepreta {
         font-size: 25px;
+    }
+    .imglogo img{
+        display: none;
+    }
+    .logotxt{
+        display: block;
+        margin-top: 23px;
+        width: 10%;
+    }
+        .logotxt a {
+            width: 100%;
+            text-decoration: none;
+            padding: 8px;
+        }
+    .logotxt a:hover{
+        background: white;
+    }
+}
+
+@media only screen and (max-width: 359px){
+    .logotxt{
+        width: 2%;
+    }
+    .imglogo img {
+        display: none;
     }
 }
