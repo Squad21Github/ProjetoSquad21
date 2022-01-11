@@ -1,0 +1,55 @@
+﻿@model Refugiados1.Models.EscolherDadiva
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<header>
+    <div>
+        <h2>Detalhes</h2>
+    </div>
+</header>
+
+<section>
+    <br />
+    <div>
+        <h5>Escolher Dádiva</h5>
+        <hr />
+        <dl class="row">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Ong)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Ong)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Endereço)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Endereço)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Telefone)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Telefone)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+            <dt class = "col-sm-2">
+              Dádiva
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.CriarDadiva.Dadiva)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model?.IdEscolherDadiva" class="btn btn-primary">Editar</a> |
+        <a asp-action="Index" class="btn-primary btn">Voltar</a>
+    </div>
+</section>

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Refugiados</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Refugiados1.styles.css" asp-append-version="true" />
+    <link rel="icon" href="~/midia/migration-3129340.ico" />
+</head>
+<body >
+    <header>
+        <nav class="navs">
+            
+            <a asp-controller="Home" asp-action="Index" class="imglogo logo"><img src="~/midia/logo.png" height="40px"/></a>
+            <div class="logotxt">
+            <a asp-controller="Home" asp-action="Index">Refúgio</a>
+            </div>
+            <ul class="menus">
+                <li><a asp-controller="Home" asp-action="Index">HOME</a></li>
+                <li><a href="#">DÁDIVAS</a>
+                    <ul>
+                        <li><a asp-controller="Home" asp-action="Ajudadores">PESSOA AJUDADORA</a></li>
+                        <li><a asp-controller="Home" asp-action="Ongs">ONG</a></li>
+                    </ul>
+                </li>
+                <li><a asp-controller="Home" asp-action="Sobre">SOBRE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+
+    <div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top">
+        <span>&copy; @DateTime.Now.Year - Refugiados - <a asp-controller="Home" asp-action="Sobre">Sobre</a></span>
+         | <span>Contato: squad21github@gmail.com</span>
+        <div  id="root">
+            
+        </div>
+        
+    </footer>
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

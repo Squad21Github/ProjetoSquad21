@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Refugiados1.Models.CriarDadiva>
+
+@{
+    ViewData["Title"] = "Criar Dádivas";
+}
+
+<header>
+    <div>
+        <h2 style="margin-bottom: -4%;">Distribua suas Dádivas. Seja o Anjo de alguém!</h2>
+        <div class="mao">
+            <div>
+                <p class="apontador">👉</p>
+            </div>
+            <div>
+                <p style="background: lightblue;"> Exemplos de dádivas que você pode criar: Cesta Básica, Aulas de português, Roupas, Móveis, Aparelhos eletrônicos, etc.</p>
+            </div>
+        </div>
+        <p>
+            <a asp-action="Create" class="btn btn-primary">Criar Dádiva</a>
+        </p>
+        <p class="alert alert-warning" role="alert">Em caso de determinadas dádivas como perecíveis, roupas e outros, tenha atenção a qualidade, pois estará sujeito a verificação por parte da ong que recorrer a sua dádiva.</p>
+    </div>
+</header>
+
+<section >
+
+    <br/>
+    <h5>Dádivas criadas por Anjos:</h5>
+
+@foreach (var item in Model) {
+    
+        <hr/>
+            <p>
+                <strong>Nome:</strong>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </p>
+            <p>
+                <strong>@Html.DisplayNameFor(model => model.Telefone):</strong>
+                @Html.DisplayFor(modelItem => item.Telefone)
+            </p>
+            <p>
+                <strong>@Html.DisplayNameFor(model => model.Email):</strong>
+                @Html.DisplayFor(modelItem => item.Email)
+            </p>
+            <p>
+                <strong>@Html.DisplayNameFor(model => model.Dadiva):</strong>
+                @Html.DisplayFor(modelItem => item.Dadiva)
+            </p>
+
+            <span>
+                <a asp-action="Edit" asp-route-id="@item.IdCriarDadiva">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdCriarDadiva">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdCriarDadiva">Excluir</a>
+            </span>
+        
+}
+    
+</section>

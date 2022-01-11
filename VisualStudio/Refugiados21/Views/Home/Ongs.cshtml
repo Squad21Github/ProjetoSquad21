@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Ongs";
+}
+
+
+<main>
+    <section style="padding: 10px;">
+        <h3>Esta área é onde as ongs poderão solicitar e escolher dádivas.</h3>
+        <p>Caso tenha dúvidas sobre algum assunto relacionado, entre em contato conosco através do nosso email: squad21github@gmail.com</p>
+    </section>
+    <section style="width: 40%;">
+        <h2 style="display: inline;"><a asp-controller="SolicitarDadivas" asp-action="Index" style="display: flex; width: 100%; justify-content: center;">Solicitar Dádiva</a></h2>
+    </section>
+    <section style="width: 40%;">
+        <h2 style="display: inline;"><a asp-controller="EscolherDadivas" asp-action="Index" style="display: flex; width: 100%; justify-content: center;">Escolher Dádiva</a></h2>
+    </section>
+</main>

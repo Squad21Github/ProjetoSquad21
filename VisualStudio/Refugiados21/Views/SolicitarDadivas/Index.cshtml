@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Refugiados1.Models.SolicitarDadiva>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<header>
+    <div>
+        <h4>Ong - Solicite uma Dádiva</h4>
+
+        <p>
+            <a asp-action="Create" class="btn btn-primary">Solicitar</a>
+        </p>
+    </div>
+</header>
+
+<section>
+    <br />
+    <h4>Dádivas solicitadas:</h4>
+
+    @foreach (var item in Model) {
+        <hr />
+        <p>
+            @Html.DisplayNameFor(model => model.Ong):
+            @Html.DisplayFor(modelItem => item.Ong)
+        </p>
+        <p>
+            @Html.DisplayNameFor(model => model.Endereço):
+            @Html.DisplayFor(modelItem => item.Endereço)
+        </p>
+        <p>
+            @Html.DisplayNameFor(model => model.Telefone):
+            @Html.DisplayFor(modelItem => item.Telefone)
+        </p>
+        <p>
+            @Html.DisplayNameFor(model => model.Email):
+            @Html.DisplayFor(modelItem => item.Email)
+        </p>
+        <p>
+            @Html.DisplayNameFor(model => model.Dádiva):
+            @Html.DisplayFor(modelItem => item.Dádiva)
+        </p>
+        <span>
+            <a asp-action="Edit" asp-route-id="@item.IdDadiva">Editar</a> |
+            <a asp-action="Details" asp-route-id="@item.IdDadiva">Detalhes</a> |
+            <a asp-action="Delete" asp-route-id="@item.IdDadiva">Excluir</a>
+        </span>
+    }
+
+</section>
