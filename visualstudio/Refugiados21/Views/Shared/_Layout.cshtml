@@ -11,22 +11,35 @@
 </head>
 <body >
     <header>
-        <nav class="navs">
-            
-            <a asp-controller="Home" asp-action="Index" class="imglogo logo"><img src="~/midia/logo.png" height="40px"/></a>
-            <div class="logotxt">
-            <a asp-controller="Home" asp-action="Index">Refúgio</a>
-            </div>
-            <ul class="menus">
-                <li><a asp-controller="Home" asp-action="Index">HOME</a></li>
-                <li><a href="#">DÁDIVAS</a>
-                    <ul>
-                        <li><a asp-controller="Home" asp-action="Ajudadores">PESSOA AJUDADORA</a></li>
-                        <li><a asp-controller="Home" asp-action="Ongs">ONG</a></li>
+        <nav class="navs navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index" class="imglogo logo"><img src="~/midia/logo.png" height="40px"/></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="menus navbar-nav">
+                        <li><a asp-controller="Home" asp-action="Index">HOME</a></li>
+                        <li><a href="#">DÁDIVAS</a>
+                            <ul>
+                                <li><a asp-controller="Home" asp-action="Ajudadores">PESSOA AJUDADORA</a></li>
+                                <li><a asp-controller="Home" asp-action="Ongs">ONG</a></li>
+                            </ul>
+                        </li>
+                        <li><a asp-controller="Home" asp-action="Sobre">SOBRE</a></li>
                     </ul>
-                </li>
-                <li><a asp-controller="Home" asp-action="Sobre">SOBRE</a></li>
-            </ul>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav" style="margin-right: 10px;">
+                <ul class="menus logins navbar-nav">
+                    <li><a href="#">LOGIN</a>
+                        <ul>
+                            <li><a asp-controller="Home" asp-action="LoginAnjo">Login Anjo</a></li>
+                            <li><a asp-controller="Home" asp-action="LoginOng">Login Ong</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
