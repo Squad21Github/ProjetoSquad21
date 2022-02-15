@@ -1,17 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Refugiados1.Models;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Identity;
+
+
 
 namespace Refugiados1.Controllers
 {
     public class HomeController : Controller
     {
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
+
 
         public IActionResult Index()
         {
@@ -32,13 +38,17 @@ namespace Refugiados1.Controllers
         {
             return View();
         }
+        
 
         public IActionResult LoginAnjo()
         {
+            
             return View();
+
         }
         public IActionResult LoginOng()
         {
+            
             return View();
         }
 
