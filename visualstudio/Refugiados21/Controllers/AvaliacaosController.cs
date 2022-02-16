@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -14,16 +15,26 @@ namespace Refugiados1.Controllers
     public class AvaliacaosController : Controller
     {
         private readonly Refugiados1Context _context;
+        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public AvaliacaosController(Refugiados1Context context)
+        public AvaliacaosController(Refugiados1Context context, UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
         {
             _context = context;
+            _userManager = userManager;
+            _signInManager = signInManager;
         }
 
         // GET: Avaliacaos
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Avaliacao.ToListAsync());
+            if (_signInManager.IsSignedIn(User))
+            {
+                return View(await _context.Avaliacao.ToListAsync());
+            }
+            else { 
+                return BadRequest();
+            }
         }
 
         // GET: Avaliacaos/Details/5
@@ -41,13 +52,22 @@ namespace Refugiados1.Controllers
                 return NotFound();
             }
 
-            return View(avaliacao);
+            if (_signInManager.IsSignedIn(User))
+            {
+                return View(avaliacao);
+            }
+
+            return BadRequest();
         }
 
         // GET: Avaliacaos/Create
         public IActionResult Create()
         {
-            return View();
+            if (_signInManager.IsSignedIn(User))
+            {
+                return View();
+            }
+            return BadRequest();
         }
 
         // POST: Avaliacaos/Create
@@ -79,7 +99,11 @@ namespace Refugiados1.Controllers
             {
                 return NotFound();
             }
-            return View(avaliacao);
+            if (_signInManager.IsSignedIn(User))
+            {
+                return View(avaliacao);
+            }
+            return BadRequest();
         }
 
         // POST: Avaliacaos/Edit/5
@@ -131,8 +155,11 @@ namespace Refugiados1.Controllers
             {
                 return NotFound();
             }
-
-            return View(avaliacao);
+            if (_signInManager.IsSignedIn(User))
+            {
+                return View(avaliacao);
+            }
+            return BadRequest();
         }
 
         // POST: Avaliacaos/Delete/5

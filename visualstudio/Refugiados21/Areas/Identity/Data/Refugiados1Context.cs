@@ -10,6 +10,7 @@ public class Refugiados1Context : IdentityDbContext<IdentityUser>
     public Refugiados1Context(DbContextOptions<Refugiados1Context> options)
         : base(options)
     {
+        Database.EnsureCreated();
     }
 
     public DbSet<AtenderDadiva> AtenderDadiva { get; set; }

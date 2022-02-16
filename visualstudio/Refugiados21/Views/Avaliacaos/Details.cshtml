@@ -4,11 +4,13 @@
     ViewData["Title"] = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h1>Details</h1>
-
-<div>
-    <h4>Avaliacao</h4>
+<header>
+    <div>
+        <h1>Detalhes</h1>
+    </div>
+</header>
+<div class="section">
+    <h4>Avaliação</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -30,8 +32,9 @@
             @Html.DisplayFor(model => model.Avaliacoes)
         </dd>
     </dl>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model?.IdAvaliacao">Editar</a> |
+        <a asp-action="Index">Voltar para os comentários</a>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.IdAvaliacao">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+

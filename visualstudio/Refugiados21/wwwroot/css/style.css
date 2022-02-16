@@ -170,7 +170,7 @@ header div h3 {
 }
 
 .section {
-    display: grid;
+    display: block;
     margin: auto;
     margin-top: 30px;
     background-color: white;

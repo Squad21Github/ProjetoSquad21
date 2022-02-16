@@ -10,12 +10,15 @@ namespace Refugiados1.Controllers
 {
     public class HomeController : Controller
     {
-
+        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
         {
             _logger = logger;
+            _userManager = userManager;
+            _signInManager = signInManager;
         }
 
 
@@ -31,12 +34,26 @@ namespace Refugiados1.Controllers
 
         public IActionResult Ajudadores()
         {
-            return View();
+            if (_signInManager.IsSignedIn(User))
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction(nameof(Index));
+            }
         }
 
         public IActionResult Ongs()
         {
-            return View();
+            if (_signInManager.IsSignedIn(User))
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction(nameof(Index));
+            }
         }
         
 
@@ -44,7 +61,7 @@ namespace Refugiados1.Controllers
         {
             
             return View();
-
+            
         }
         public IActionResult LoginOng()
         {
